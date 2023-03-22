@@ -1,15 +1,20 @@
 import React from 'react';
 import './App.css';
+import Form,  { FormState } from './components/Form';
 
 
+const App : React.FC = () =>{
 
+  const handleSubmit = (data : FormState) => {
+    console.log(data)
+  }
 
-function App() {  
-  return (
+  return(
     <>
-      <h1>Hello</h1>      
+      <Form onSubmit={handleSubmit}/>
     </>
-  );
+  )
 }
+
 
 export default App;
